@@ -97,7 +97,7 @@
 <meta property="og:description" content="背景为方便项目的上线以及前后端代码的保存，其实主要是因为某吉吉懒。
 步骤其实前后端共用Git仓库十分简单。此种方法适用
 1.在后端的项目文件夹中，新建名为frontend(此处文件名可自定义)的文件夹。公司前端项目一般采用的是vue-cli生成的脚手架，将脚手架生成之后，直接迁移到frontend文件夹内，即可。简单地说，就是把之前写好的代码，所有文件，复制，粘贴，放在frontend中就可以了。">
-<meta property="og:updated_time" content="2018-04-23T02:19:36.411Z">
+<meta property="og:updated_time" content="2018-04-23T02:26:00.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前后端共用同一Git仓库">
 <meta name="twitter:description" content="背景为方便项目的上线以及前后端代码的保存，其实主要是因为某吉吉懒。
@@ -383,16 +383,9 @@
 <h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>其实前后端共用Git仓库十分简单。此种方法适用</p>
 <p>1.在后端的项目文件夹中，新建名为frontend(此处文件名可自定义)的文件夹。公司前端项目一般采用的是vue-cli生成的脚手架，将脚手架生成之后，直接迁移到frontend文件夹内，即可。<br>简单地说，就是把之前写好的代码，所有文件，复制，粘贴，放在frontend中就可以了。</p>
 <p>2.打开config文件夹 -&gt; index.js文件</p>
-<p>3.修改    build参数</p>
-<p>/<strong><em>配置修改*</em></strong>/</p>
-<p>  env: require(‘./prod.env’),//生产配置</p>
-<p>  index: path.resolve(__dirname, ‘../../public/index.html’),</p>
-<p>  assetsRoot: path.resolve(__dirname, ‘../../public/‘),</p>
-<p>  assetsSubDirectory: ‘static’,</p>
-<p>  assetsPublicPath: ‘./‘,<br>​<br>/<strong>原先配置*</strong>/<br>  //Template for index.html<br>  index: path.resolve(__dirname, ‘../dist/index.html’),</p>
-<p>  // Paths<br>  assetsRoot: path.resolve(__dirname, ‘../dist’),</p>
-<p>  assetsSubDirectory: ‘static’,</p>
-<p>  assetsPublicPath: ‘/‘,</p>
+<p>3.修改  build    参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/配置修改*/</div><div class="line">  env: require(&apos;./prod.env&apos;),//生产配置</div><div class="line">  index: path.resolve(__dirname, &apos;../../public/index.html&apos;),</div><div class="line">  assetsRoot: path.resolve(__dirname, &apos;../../public/&apos;),</div><div class="line">  assetsSubDirectory: &apos;static&apos;,</div><div class="line">  assetsPublicPath: &apos;./&apos;,</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/*原先配置*/</div><div class="line">  //Template for index.html</div><div class="line">  index: path.resolve(__dirname, &apos;../dist/index.html&apos;),</div><div class="line">  // Paths</div><div class="line">  assetsRoot: path.resolve(__dirname, &apos;../dist&apos;),</div><div class="line">  assetsSubDirectory: &apos;static&apos;,</div><div class="line">  assetsPublicPath: &apos;/&apos;,</div></pre></td></tr></table></figure>
 <h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><h4 id="优点一"><a href="#优点一" class="headerlink" title="优点一"></a>优点一</h4><ul>
 <li>原先配置，通过webpack打包至    dist    文件夹中，配置修改之后，直接打包至后端的public问价夹下。如此一来，即使是后端人员，在没有前端人员的协同下，也可自行打包前端代码，上传至服务器。</li>
 </ul>

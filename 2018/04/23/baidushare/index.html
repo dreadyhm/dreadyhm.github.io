@@ -92,8 +92,8 @@
 2.根据需求选择分享功能形式
 3.根据需求选择页面按钮样式
 4.然后就可以直接复制代码使用了
-5.将js代码粘贴至index.html中`
-12345678910111">
+5.将js代码粘贴至index.html中
+123456789101112">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue引入百度分享">
 <meta property="og:url" content="http://yoursite.com/2018/04/23/baidushare/index.html">
@@ -103,9 +103,9 @@
 2.根据需求选择分享功能形式
 3.根据需求选择页面按钮样式
 4.然后就可以直接复制代码使用了
-5.将js代码粘贴至index.html中`
-12345678910111">
-<meta property="og:updated_time" content="2018-04-23T02:04:50.470Z">
+5.将js代码粘贴至index.html中
+123456789101112">
+<meta property="og:updated_time" content="2018-04-23T02:31:54.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue引入百度分享">
 <meta name="twitter:description" content="背景平时我们经常在浏览网页是看到如下图标，能将此网页分享到社交软件中，本次项目也用到了这个分享功能，此次使用的是百度分享，当然还有jiaThis等等插件。
@@ -113,8 +113,8 @@
 2.根据需求选择分享功能形式
 3.根据需求选择页面按钮样式
 4.然后就可以直接复制代码使用了
-5.将js代码粘贴至index.html中`
-12345678910111">
+5.将js代码粘贴至index.html中
+123456789101112">
 
 
 
@@ -396,16 +396,13 @@
 <p>2.根据需求选择分享功能形式</p>
 <p>3.根据需求选择页面按钮样式</p>
 <p>4.然后就可以直接复制代码使用了</p>
-<p>5.将js代码粘贴至index.html中<br>`</p>
+<p>5.将js代码粘贴至index.html中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">window._bd_share_config=&#123;</div><div class="line">    &quot;common&quot;: &#123;</div><div class="line">        &quot;bdSnsKey&quot;: &#123;&#125;,</div><div class="line">        &quot;bdText&quot;: &quot;&quot;,</div><div class="line">        &quot;bdMini&quot;: &quot;2&quot;,</div><div class="line">        &quot;bdMiniList&quot;: false,</div><div class="line">        &quot;bdPic&quot;: &quot;&quot;,</div><div class="line">        &quot;bdStyle&quot;: &quot;0&quot;,</div><div class="line">        &quot;bdSize&quot;: &quot;16&quot;,</div><div class="line">    &#125;,</div><div class="line">    &quot;share&quot;:&#123;&#125;</div><div class="line">&#125;;</div><div class="line">with(document)0[(getElementsByTagName(&apos;head&apos;)[0]||body).appendChild(createElement(&apos;script&apos;)).src=&apos;http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=&apos;+~(-new Date()/36e5)];</div></pre></td></tr></table></figure>
-<p>`</p>
-<p>6.将html代码粘贴至需求页面中<br>` </p>
+<p>6.将html代码粘贴至需求页面中 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;bdsharebuttonbox&quot; style=&quot;height: 30px;position: absolute;left: 700px;top: 34px;&quot;&gt;</div><div class="line">   &lt;a href=&quot;#&quot; class=&quot;bds_qzone&quot; data-cmd=&quot;qzone&quot; title=&quot;分享到QQ空间&quot;&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;#&quot; class=&quot;bds_tsina&quot; data-cmd=&quot;tsina&quot; title=&quot;分享到新浪微博&quot;&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;#&quot; class=&quot;bds_sqq&quot; data-cmd=&quot;sqq&quot; title=&quot;分享到QQ好友&quot;&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;#&quot; class=&quot;bds_weixin&quot; data-cmd=&quot;weixin&quot; title=&quot;分享到微信&quot;&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;#&quot; class=&quot;bds_more&quot; data-cmd=&quot;more&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;`</div></pre></td></tr></table></figure>
 <p>（此处有大坑：代码必须粘贴在所有标签的最前面，否则会被遮挡，无论如何设置样式都无法显示）</p>
 <h3 id="刷新问题"><a href="#刷新问题" class="headerlink" title="刷新问题"></a>刷新问题</h3><p>调整完样式之后，以为可以完美结束了，然而坑又出现了。第一次进入带分享功能的页面。what？我的分享呢！ 刷新，出现了。再次进入，what？又消失了。 刷新，又出现了。 原来，百度分享自带自动销毁逻辑，还需要重新初始化</p>
-<p>`</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mounted () &#123;</div><div class="line">	if(window._bd_share_main)&#123;//百度分享重新初始化</div><div class="line">		window._bd_share_main.init();	</div><div class="line">	&#125;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
-<p>`</p>
 
       
     </div>
