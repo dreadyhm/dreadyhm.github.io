@@ -103,7 +103,7 @@ vue引入在main.js中引入插件
 
 vue引入在main.js中引入插件
 123import VueAwesomeSwiper from &amp;apos;vue-awesome-swiper&amp;apos;import &amp;apos;swiper/di">
-<meta property="og:updated_time" content="2018-05-14T05:57:13.914Z">
+<meta property="og:updated_time" content="2018-05-14T05:59:21.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue中使用Swiper实现轮播效果">
 <meta name="twitter:description" content="前言在学习的时候，需要实现一个轮播效果，Swiper拥有的效果比较多样，因此选择它来实现轮播。
@@ -387,18 +387,9 @@ vue引入在main.js中引入插件
 </li>
 <li><p>使用</p>
 <p>html代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">​</div></pre></td></tr></table></figure>
-<pre><code>&lt;swiper :options=&quot;swiperOption&quot;&gt;
-&lt;swiper-slide v-for=&quot;(page,index) in pages&quot; :key=&quot;index&quot;&gt;
-    &lt;div class=&quot;icon&quot; v-for=&quot;item in page&quot;&gt;
-        &lt;div class=&quot;icon-img&quot;&gt;&lt;img :src=&quot;item.imgUrl&quot; alt=&quot;&quot; class=&quot;icon-img-content&quot;&gt;&lt;/div&gt;
-        &lt;p class=&quot;icon-desc&quot;&gt;{{item.desc}}&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/swiper-slide&gt;
-&lt;div class=&quot;swiper-pagination&quot;  slot=&quot;pagination&quot;&gt;&lt;/div&gt;
-</code></pre><p>  <br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;swiper :options=<span class="string">"swiperOption"</span>&gt;</div><div class="line">     &lt;swiper-slide v-for="(page,index) in pages" :key="index"&gt;</div><div class="line">         &lt;div class="icon" v-for="item in page"&gt;</div><div class="line">             &lt;div class="icon-img"&gt;&lt;img :src="item.imgUrl" alt="" class="icon-img-content"&gt;&lt;/div&gt;</div><div class="line">             &lt;p class="icon-desc"&gt;&#123;&#123;item.desc&#125;&#125;&lt;/p&gt;</div><div class="line">         &lt;/div&gt;</div><div class="line">     &lt;/swiper-slide&gt;</div><div class="line">     &lt;div class="swiper-pagination"  slot="pagination"&gt;&lt;/div&gt;</div><div class="line"> &lt;/swiper&gt;</div></pre></td></tr></table></figure>
 <p>options绑定swiperOption</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">data()&#123;</div><div class="line">      return &#123;</div><div class="line">          swiperOption:&#123;</div><div class="line">              pagination: &#123;//分页器</div><div class="line">                  el: &apos;.swiper-pagination&apos;,</div><div class="line">              &#125;,</div><div class="line">              autoplay:false</div><div class="line">          &#125;,</div><div class="line">      &#125;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">data()&#123;</div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">          <span class="attr">swiperOption</span>:&#123;</div><div class="line">              <span class="attr">pagination</span>: &#123;<span class="comment">//分页器</span></div><div class="line">                  el: <span class="string">'.swiper-pagination'</span>,</div><div class="line">              &#125;,</div><div class="line">              <span class="attr">autoplay</span>:<span class="literal">false</span></div><div class="line">          &#125;,</div><div class="line">      &#125;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p> 整体来说，这个插件的使用不是很高。在跟着教程做的时候，还是踩了一次坑，原因是Swiper的官网已经更新使用方法，但是教程是之前的。因此，在学习这种插件的时候，尽量还是看官网吧。</p>
