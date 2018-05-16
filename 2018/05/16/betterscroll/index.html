@@ -87,21 +87,31 @@
 
 
 
-<meta name="description" content="前言偶然在浏览之前上线网站时，发现在Chrome调试Network下有Size字段，部分js文件from memory cache，部分js文件from disk cache。这让我很疑惑，然后就各种google，各种百度，在stack overflow上，也有人提出了相同的问题，但是无人回答。然后。在百度上，有人提到了http的缓存，果然有关系。
-缓存http缓存:当Web请求抵达缓存时， 如果">
+<meta name="description" content="前言在做webApp的时候，要实现滚动效果，就使用了better-scroll，这款插件能解决各种滚动场景的需求。
+使用步骤
+npm安装better-scroll:  npm install better-scroll –save
+
+html架构必须符合better-scroll要求
+12345678&amp;lt;div class=&quot;wrapper&quot;&amp;gt;  &amp;lt;ul class=&quot;conten">
 <meta property="og:type" content="article">
-<meta property="og:title" content="From Disk Cache 与 From Memory Cache">
-<meta property="og:url" content="http://yoursite.com/2018/05/11/httpcache/index.html">
+<meta property="og:title" content="vue中使用better-scroll">
+<meta property="og:url" content="http://yoursite.com/2018/05/16/betterscroll/index.html">
 <meta property="og:site_name" content="dread's blog">
-<meta property="og:description" content="前言偶然在浏览之前上线网站时，发现在Chrome调试Network下有Size字段，部分js文件from memory cache，部分js文件from disk cache。这让我很疑惑，然后就各种google，各种百度，在stack overflow上，也有人提出了相同的问题，但是无人回答。然后。在百度上，有人提到了http的缓存，果然有关系。
-缓存http缓存:当Web请求抵达缓存时， 如果">
-<meta property="og:image" content="https://images2017.cnblogs.com/blog/580705/201712/580705-20171223225445271-471561818.jpg">
-<meta property="og:updated_time" content="2018-05-11T02:23:02.316Z">
+<meta property="og:description" content="前言在做webApp的时候，要实现滚动效果，就使用了better-scroll，这款插件能解决各种滚动场景的需求。
+使用步骤
+npm安装better-scroll:  npm install better-scroll –save
+
+html架构必须符合better-scroll要求
+12345678&amp;lt;div class=&quot;wrapper&quot;&amp;gt;  &amp;lt;ul class=&quot;conten">
+<meta property="og:updated_time" content="2018-05-16T09:10:29.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="From Disk Cache 与 From Memory Cache">
-<meta name="twitter:description" content="前言偶然在浏览之前上线网站时，发现在Chrome调试Network下有Size字段，部分js文件from memory cache，部分js文件from disk cache。这让我很疑惑，然后就各种google，各种百度，在stack overflow上，也有人提出了相同的问题，但是无人回答。然后。在百度上，有人提到了http的缓存，果然有关系。
-缓存http缓存:当Web请求抵达缓存时， 如果">
-<meta name="twitter:image" content="https://images2017.cnblogs.com/blog/580705/201712/580705-20171223225445271-471561818.jpg">
+<meta name="twitter:title" content="vue中使用better-scroll">
+<meta name="twitter:description" content="前言在做webApp的时候，要实现滚动效果，就使用了better-scroll，这款插件能解决各种滚动场景的需求。
+使用步骤
+npm安装better-scroll:  npm install better-scroll –save
+
+html架构必须符合better-scroll要求
+12345678&amp;lt;div class=&quot;wrapper&quot;&amp;gt;  &amp;lt;ul class=&quot;conten">
 
 
 
@@ -129,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/11/httpcache/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/16/betterscroll/"/>
 
 
 
 
 
-  <title> From Disk Cache 与 From Memory Cache | dread's blog </title>
+  <title> vue中使用better-scroll | dread's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -274,7 +284,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/httpcache/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/betterscroll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="俞红梅">
@@ -295,7 +305,7 @@
             
             
               
-                From Disk Cache 与 From Memory Cache
+                vue中使用better-scroll
               
             
           </h1>
@@ -310,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-11T10:20:46+08:00">
-                2018-05-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T16:32:22+08:00">
+                2018-05-16
               </time>
             
 
@@ -368,19 +378,34 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>偶然在浏览之前上线网站时，发现在Chrome调试Network下有Size字段，部分js文件from memory cache，部分js文件from disk cache。这让我很疑惑，然后就各种google，各种百度，在stack overflow上，也有人提出了相同的问题，但是无人回答。然后。在百度上，有人提到了http的缓存，果然有关系。</p>
-<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>http缓存:当Web请求抵达缓存时， 如果本地有“已缓存的”副本，就可以从本地存储设备而不是从原始服务器中提取这个文档。</p>
-<h3 id="MemoryCache"><a href="#MemoryCache" class="headerlink" title="MemoryCache"></a>MemoryCache</h3><p>Memory Cache:将资源缓存到内存中，等待下次访问时不需要重新下载资源，而直接从内存中获取。</p>
-<h3 id="DiskCache"><a href="#DiskCache" class="headerlink" title="DiskCache"></a>DiskCache</h3><p>Disk Cache:将资源缓存到磁盘中，等待下次访问时不需要重新下载资源，而直接从磁盘中获取，它的直接操作对象是CurlCacheManager。</p>
-<h3 id="相似点与区别"><a href="#相似点与区别" class="headerlink" title="相似点与区别"></a>相似点与区别</h3><p>相似点:只能存储一些派生类资源文件。它的存储形式为一个index.dat文件，记录存储数据的url，然后再分别存储该url的response信息和content内容。Response信息最大作用就是用于判断服务器上该url的content内容是否被修改。</p>
-<p>区别:当退出进程时，内存中的数据会被清空，而磁盘的数据不会，所以，当下次再进入该进程时，该进程仍可以从diskCache中获得数据，而memoryCache则不行。</p>
-<h3 id="三级缓存原理"><a href="#三级缓存原理" class="headerlink" title="三级缓存原理"></a>三级缓存原理</h3><p>那为什么有些资源from disk cache ，有些from memory cache。http有一个三级缓存原理。</p>
-<ol>
-<li>先去内存看，如果有，直接加载</li>
-<li>如果内存没有，择取硬盘获取，如果有直接加载</li>
-<li>如果硬盘也没有，那么就进行网络请求</li>
-<li>加载到的资源缓存到硬盘和内存<br>用一张图来最后解释。<br><img src="https://images2017.cnblogs.com/blog/580705/201712/580705-20171223225445271-471561818.jpg" alt=""><br>如有不详细之处，参考链接博客：<br><a href="http://www.cnblogs.com/maomaochong123/p/8094740.html" target="_blank" rel="external">http://www.cnblogs.com/maomaochong123/p/8094740.html</a></li>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在做webApp的时候，要实现滚动效果，就使用了better-scroll，这款插件能解决各种滚动场景的需求。</p>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><ol>
+<li><p>npm安装better-scroll:  npm install better-scroll –save</p>
+</li>
+<li><p>html架构必须符合better-scroll要求</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>...<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    ...</div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 这里可以放一些其它的 DOM，但不会影响滚动 --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>初始化代码</p>
+<ul>
+<li>引入better-scroll</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import BScroll from &apos;better-scroll&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>找到作用的父容器wrapper</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!--html--&gt;</div><div class="line">&lt;div ref=&quot;wrapper&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!--js--&gt;</div><div class="line">mounted()&#123;</div><div class="line">    this.scroll = new BScroll(this.$refs.wrapper);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ol>
+<h3 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h3><p>以为这么轻松的就解决了吗？太天真了！</p>
+<p>我在wrapper里的一个div添加了点击事件，但是点击事件不生效。better-scroll是默认阻止touch的。所以要怎么办呢？</p>
+<p>###填坑</p>
+<p>修改better-scroll的配置，让它的点击事件生效，添加 <code>click:true</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mounted()&#123;</div><div class="line">    this.scroll = new BScroll(this.$refs.wrapper,&#123;</div><div class="line">        click:true</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>better-scroll还有很多的配置项，在网上看到了一份配置总结，附上链接，便于以后查阅。</p>
+<p>better-scroll配置详细说明链接: <a href="https://blog.csdn.net/tionsu/article/details/77651051" target="_blank" rel="external"></a></p>
+<h3 id="完善"><a href="#完善" class="headerlink" title="完善"></a>完善</h3><p>看到有人有遇到下拉刷新，点击事件又失效的情况，但是目前我还没有遇到，为了避免之后突然就出现bug的情况，还是将代码完善下的比较好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">methods:&#123;</div><div class="line">    initScroll()&#123;</div><div class="line">        if(!this.scroll)&#123;</div><div class="line">            this.scroll = new BScroll(this.$refs.wrapper,&#123;</div><div class="line">                click:true</div><div class="line">            &#125;)</div><div class="line">        &#125;else&#123;</div><div class="line">            this.scroll.refresh();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;,</div><div class="line">mounted()&#123;</div><div class="line">    this.initScroll();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>better-scroll这个东西用起来还是蛮好用的，但是一百度，发现坑还是蛮多的，日后踩坑了，再来补充。</p>
 
       
     </div>
@@ -423,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/10/summaryone/" rel="next" title="Vue 基础知识总结(一)">
-                <i class="fa fa-chevron-left"></i> Vue 基础知识总结(一)
+              <a href="/2018/05/14/swiper/" rel="next" title="Vue中使用Swiper实现轮播效果">
+                <i class="fa fa-chevron-left"></i> Vue中使用Swiper实现轮播效果
               </a>
             
           </div>
@@ -432,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/14/swiper/" rel="prev" title="Vue中使用Swiper实现轮播效果">
-                Vue中使用Swiper实现轮播效果 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -459,7 +480,7 @@
 
 
           <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2018/05/11/httpcache/" data-title="From Disk Cache 与 From Memory Cache" data-url="http://yoursite.com/2018/05/11/httpcache/"></div>
+	<div class="ds-thread" data-thread-key="2018/05/16/betterscroll/" data-title="vue中使用better-scroll" data-url="http://yoursite.com/2018/05/16/betterscroll/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -598,7 +619,7 @@ var duoshuoQuery = {short_name:"dreadyhm"};
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存"><span class="nav-number">2.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MemoryCache"><span class="nav-number">3.</span> <span class="nav-text">MemoryCache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DiskCache"><span class="nav-number">4.</span> <span class="nav-text">DiskCache</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相似点与区别"><span class="nav-number">5.</span> <span class="nav-text">相似点与区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三级缓存原理"><span class="nav-number">6.</span> <span class="nav-text">三级缓存原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用步骤"><span class="nav-number">2.</span> <span class="nav-text">使用步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#踩坑"><span class="nav-number">3.</span> <span class="nav-text">踩坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完善"><span class="nav-number">4.</span> <span class="nav-text">完善</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
@@ -731,7 +752,7 @@ var duoshuoQuery = {short_name:"dreadyhm"};
 
 
   <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2018/05/11/httpcache/" data-title="From Disk Cache 与 From Memory Cache" data-url="请替换成文章的网址"></div>
+	<div class="ds-thread" data-thread-key="2018/05/16/betterscroll/" data-title="vue中使用better-scroll" data-url="请替换成文章的网址"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
